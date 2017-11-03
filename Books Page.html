@@ -1,29 +1,12 @@
 <!DOCTYPE html>
-<title>Best Books</title>
-<body>
-<HEAD><script>
-function getVote(int) {
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (this.readyState==4 && this.status==200) {
-      document.getElementById("poll").innerHTML=this.responseText;
-    }
-  }
-  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
-  xmlhttp.send();
-}
-</script>
-</HEAD>
-<title>About</title>
+<HTML>
+<head><link rel="icon" href="ol.png">
+<title>Clockwork Princess</title>
+<BODY background=#FFFFFF>
 <br>
-<CENTER><img src="Mar.png" width="20%" opaque></CENTER>
+<CENTER><img src="Mar.png" width="25%"></CENTER>
 <span class="title1"></span>
-</h1>
+  </h1>
 </div>
 <style>
 
@@ -391,202 +374,284 @@ p {
 }
 </style>
 </head>
-<style>
+<br>
+<br>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="Da thingy.png" style="width:100%">
+  </div>
 
-ul{
-  float: center;
-  alignment-baseline: center;
-  align-content: center;
-  text-align: center;
-}
+  <div class="mySlides fade">
+    <img src="em.png" style="width:100%">
+  </div>
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  overflow: hidden;
-  background-color:white;
-  font-family:'Traveling _Typewriter';
-}
+  <div class="mySlides fade">
+    <img src="ch.png" style="width:100%">
+  </div>
 
-li {
-  float: left;
-}
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
 
-li a, .dropbtn {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: transparent;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #E2DEFF;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-}
-
-.dropdown-content a:hover {background-color: #E2DEFF}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-ul {
-display: flex;
-justify-content: center;
-}
-
-ul li {
-padding: 0 8px;
-}
-</style>
-</head>
-<body>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
 
 <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color:white;
-}
-
-li {
-  float: left;
-}
-
-li a, .dropbtn {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: #E2DEFF;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #E2DEFF;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-}
-
-.dropdown-content a:hover {background-color: #E2DEFF}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-p {
-  text-indent: 50px;
-}
-p {
-  padding-right: 2cm;
-}
-.dropdown {
-  list-style: none;
-  margin: 0 auto;
-  text-align:center;
-}
-* {box-sizing:border-box}
-
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-max-width: 1000px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 </style>
-</body>
-<head>
-</head>
-<body>
-<center>
-<br>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
-<font face="Avenir" size="2">
-<center><h1>Our Agreed Favorite Books</h1></center>
-<a href="https://www.goodreads.com/book/show/4556058-the-last-olympian?from_search=true"><img src="PJ.jpg" alt="Percy Jackson" width="225" height="325"v>
-<a href="https://www.goodreads.com/book/show/10025305-clockwork-prince?from_search=true"><img src="jEM.jpg" alt="The Infernal Devices" width="225" height="325">
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-<a href="https://www.goodreads.com/bo
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-ok/show/28006120-the-ship-of-the-dead?from_search=true"><img src="thot.jpeg" alt="Magnus Chase" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/12691.Marley_and_Me?from_search=true"><img src="MM.png" alt="Marley and Me" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire?from_search=true"><img src="GOF.jpeg" alt="Harry Potter" width="225" height="325"></a>
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+#myBtn:hover {
+  background-color: #000000;
+}
+</style>
+<SCRIPT>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } 
+      else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</SCRIPT>
+</div>
+<br>
+<br>
+<font face="Seravek" size="4" color="#666666">
+<br>
+<div style="margin-left: 12em; margin-right: 12em;">
+Author: Cassandra Clare
+<br>
+<br>
+Genre: Fantasy, Adventure
+<br>
+<br>
+Age Recommendation: 13+
+<br>
+<br>
+Rating: ★★★★★
+<br>
+<br>
+<br>
+<font face="Seravek" size="5" color="black">
+<center><b>TO BEGIN WITH... THIS BOOK WAS FUDGING AWESOME!!!</b></center>
+<br>
+<font face="Seravek" size="4" color="#666666">
+Ok...so this review is going to be super rambly.  This book just <i>pulls</i> at my heartstrings!  It was the perfect combination of humor and seriousness, written in a-not exactly old- but certaintly antique(NOT BORING) style, which <i>seems</i> antique, but it's actually...not *bangs head on table for rambling*.  Well, Cassie just has a flair for writing.
+<br>
+<BR>
+THIS BOOK WAS SO GOOD GO READ IT
+<BR>
+<BR>
+<br>
+<center><img src="wm.png" width ="30%"></center>
+<BR>
+<BR>
+<font face="Seravek" size="5" color="black">
+<center><b>SYNOPIS BY WIKIPEDIA AND NOTES BY ME</b></center>
+<font face="Seravek" size="4" color="#666666">
+
+<br>
+Danger and betrayal, love and loss, secrets and enchantment are woven together in the breathtaking finale to the #1 New York Times bestselling Infernal Devices Trilogy, prequel to the internationally bestselling Mortal Instruments series.  (this trilogy is so much better for the Mortal Instruments, so in case you didn't like the Mortal Instruments, which I didn't at first, read this)
+<BR>
+<BR>
+THE INFERNAL DEVICES WILL NEVER STOP COMING (Benedict has a flair for the dramatic lol)
+<BR><BR>
+A net of shadows begins to tighten around the Shadowhunters of the London Institute. Mortmain plans to use his Infernal Devices, an army of pitiless automatons, to destroy the Shadowhunters. He needs only one last item to complete his plan: he needs Tessa Gray. (his plan is stupid)
+<BR><BR>
+Charlotte Branwell, head of the London Institute, is desperate to find Mortmain before he strikes. But when Mortmain abducts Tessa, the boys who lay equal claim to her heart (NOT TRUE WESSA FOR LIFE #OTP), Jem and Will, will do anything to save her. For though Tessa and Jem are now engaged, Will is as much in love with her as ever (proves my point about wessa).
+<BR><BR>
+As those who love Tessa rally to rescue her from Mortmain’s clutches (THE CLAVE SUCKS), Tessa realizes that the only person who can save her is herself. But can a single girl, even one who can command the power of angels, face down an entire army? (YES, YES SHE CAN)
+<BR><BR>
+Danger and betrayal, secrets and enchantment, and the tangled threads of love and loss intertwine as the Shadowhunters are pushed to the very brink of destruction in the breathtaking conclusion to the Infernal Devices trilogy (I WANT MORE INFERNAL DEVICES I AM SUFFERING FROM WITHDRAWAL).
+<BR><BR>
+<font face="Seravek" size="5" color="black">
+<br>
+<center><b>CHARACTERS</b></center>
+<font face="Seravek" size="4" color="#666666">
+<BR>
+●Tessa Gray- She is just soooo cool and witty and awesome!  Her <i>badassery</i> and bravery and cleverness.  One of my top 5 fictional heroines.  Such a Ravenclaw!  But at the same time, she has the traits of a Hufflepuff... hatstall alert.
+<br><br>
+●William Herondale- I LOVE WILLIAM HERONDALE HE IS DA BEST. He is EVERYTHING a fangirl could ever want in a boyfriend:kind, witty, intelligente, loyal, sarcastic- and most of all- he loves reading!!!  He is just so fun to read, and his character arc, his backstory, gods, I love this guy.  #1 fictional boyfriend.
+<br><br>
+●James Carstairs- Jem is a cinnamon roll and should be protected at all costs.  I love Jem.  #3 fictional boyfriend.
+<br><br>
+●Sophie Collins- Sophie is also a cinnamon roll but she is badass and if anyone touches her I'm sure Gideon would freak.  She is such a strong character.
+<br><br>
+●Jessamine Lovelace- Not sure what I feel about Jessamine...  She does have a redemption arc, and I feel like she turned more likable in the end.  She's not a <i>bad</i> person, but I just never really liked her.
+<br><br>
+●Charlotte Fairchild- Badass woman who takes no crap and sexism but it also very gentle and kind and so motherly and oh gods she is so badass.
+<br><br>
+●Henry Branwell- He is so clever and hilarious and enerjetic!  Ravenclaw, no question about that.
+<br><br>
+●Gideon&Gabriel- Well... I really grew to like Gabriel, and I always loved Gideon from the start.  But I feel like their storylines were a bit stereotypical, even though they were still amazing.
+<br><br>
+●Cecily Herondale- Did I mention how badass the women in this book were?  The brother sister relationship between her and Will was just...awww.
+<br><br>
+●Axel Mortmain- Slytherin.  I don't exactly hate him; I think he has a good reason to hate Shadowhunters, although he shouldnt attempt genocide as revenge...
+<br><br>
+●Benedict Lightwood- Worm
+<br><br>
+●Nathaniel Gray- Well I won't say anymore otherwise I'll spoil the books for you, but he deserved what he got.
+<br><br>
+●Consul Wayland- This idiot is the Umbridge of Infernal Devices.  He is so sexist and selfish (spoilers alert) and when his head was chopped off I was like, "I hope your head keeps rolling and...gets stepped on!"
 <br>
 <br>
 <br>
 <br>
-<center><h1>Our Agreed Fave 2017 Releases</h1></body></center>
-<a href="https://www.goodreads.com/book/show/28006120-the-ship-of-the-dead?from_search=true"><img src="thot.jpeg" alt="Magnus Chase" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/30145666-the-dark-prophecy?ac=1&from_search=true"><img src="TDP.jpg" alt="The Trials of Apollo" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/25494343-lady-midnight"><img src="LM.jpg" alt="The Dark Artifices" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/35504431-turtles-all-the-way-down?ac=1&from_search=true"><img src="TATWD.Png" alt="Turtles All The Way Down" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/16096824-a-court-of-thorns-and-roses"><img src="ACOWAR.jpg" alt="A Court of Thorns and Roses" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/32852217-the-hundredth-queen"><img src="JS,JKHLK.jpg" ALT="  " width="225" height="325"></a>
+<font face="Seravek" size="5" color="black">
+<center><b>ACTUAL REVIEW</b></center>
+<br>
+<font face="Seravek" size="4" color="#666666">
+This book was so effin amazing you have no idea.  There was a love triangle, of course, but it ended in the best possible way.  You have <i>no</i> idea how stressful it was reading the epilogue.  I have never cried so much about a book, never.  It was beautiful and sad and stunning and you want to smile because you kind of get what you want but then the EPILOGUE JUST HITS YOU.  It's like shoving a rainbow in your face and then turning the rainbow into a thousand spiders.  I won't say anymore, otherwise I will be spoiling you, but it was heart-wrenching, in a good way.  There are some Wessa/Jessa make scenes in this book, nothing too mature.  The writing is easy to understand, although there are one or two points in this book where you're just like, "oh, okay, we get it, this is 1880 Britain, they speak weirdly, but can you go back to regular talk now?"  There is romance in this book, but its not the main focus, and it's very well written, maybe the best I've ever read.  This isn't one of the of the books that finish abruptly (case in point: matched, cinder, wtc), thank goodness, although it might be because I was crying most of the time. Are you a big book crier? The crying parts started around the halfway point, and from then, tears just start flowing.  And this book is hilarious too, so I looked crazy reading it on the plane.  Imagine a person across the aisle with tears rolling down her face, sniffling softly, then suddenly she bursts into cackles- there's snot and tears everywhere - and I didnt have a napkin so I had to go to the plane bathroom to calm myself down.  Never read this in public, people.   It's way too emotional.
 <br>
 <br>
+<font face="Seravek" size="5" color="black">
+<center><b>IN CONCLUSION</b></center>
+<br>
+<font face="Seravek" size="4" color="#666666">
+Go read it.  No, go read the first 2 books first, cause those were equally amazing and great.  I WANT MORE INFERNAL DEVICES.  Well, if you're like me and can't afford a brand new copy, email me (find my email in the about page) and I will send you a totally not pirated version of the whole trilogy.  SERIOUSLY READ THE BOOKS YOU WILL NOT REGRET IT.  
+<BR><BR>OK? 
+<BR><BR>OK. <BR><BR>BYE.
+<font>
+</div>
 <br>
 <br>
-<Center><h1>Grace's Honorable Mentions</h1></Center>
-<a href="https://www.goodreads.com/book/show/625662.Anne_Boleyn_and_Me?ac=1&from_search=true"><img src="AB&M.JPg" alt="My Royal Story" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/6431797-the-wild-queen?ac=1&from_search=true"><img src="TWQ.jpg" alt="Young Royals" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/10507293-the-selection?ac=1&from_search=true"><img src="S.jpg" alt="The Selection" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/2769570-barbie-and-the-diamond-castle?ac=1&from_search=true"><img src="P&P.jpg" alt="Barbie Collection" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/22639095-the-isle-of-the-lost"><img src="IOTL.jpg" alt="Descendants" width="225" height="325"></a>
-<br>
-<br>
-<br>
-<br>
-<center><h1>Worst Books</h1></center>
-<a href="https://www.goodreads.com/book/show/13335037-divergent?ac=1&from_search=true"><img src="Divergent.jpeg" alt="Divergent" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/2767052-the-hunger-games?from_search=true"><img src="THG.jpg" alt="The Hunger Games" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/41865.Twilight?from_search=true"><img src="T.jpg" alt="Twilight" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/6186357-the-maze-runner?from_search=true"><img src="TMR.png" alt="The Maze Runner" width="225" height="325">
-<a href="https://www.goodreads.com/book/show/10818853-fifty-shades-of-grey?ac=1&from_search=true"><img src="FSOG.jpeg" alt="Fifty Shades of Grey" width="225" height="325">
-<br>
-<br>
-<br>
-<img src="100.png" width="100%">
-</center>
-</body>
-</html>
+</BODY>
+</HTML>
